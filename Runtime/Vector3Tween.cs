@@ -50,13 +50,6 @@ namespace SimpleTweening
             this.transform.localPosition = endValue;
 
         }
-        [ContextMenu("fix")]
-        private void Fix()
-        {
-            startValue = transform.InverseTransformPoint(startValue);
-            endValue = transform.InverseTransformPoint(endValue);
-        }
-
 
     }
 }
