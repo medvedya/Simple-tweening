@@ -18,7 +18,7 @@ namespace SimpleTweening
 
         protected override void OnSetValue(float t)
         {
-            var value = Vector3.Lerp(startValue, endValue, t);
+            var value = Vector3.LerpUnclamped(startValue, endValue, t);
             onSetValueEvent.Invoke(value);
             if (setToLocalPosition)
             {

@@ -18,7 +18,7 @@ namespace SimpleTweening
 
         protected override void OnSetValue(float t)
         {
-            onSetValueEvent.Invoke(Mathf.Lerp(startValue, endValue, t));
+            onSetValueEvent.Invoke(Mathf.LerpUnclamped(startValue, endValue, t));
             if (otherTweensToSetValue != null)
             {
                 foreach (var item in otherTweensToSetValue)
